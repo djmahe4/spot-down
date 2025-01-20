@@ -3,6 +3,7 @@ import os,subprocess
 from spotdl import Spotdl,Song#,Album
 from pathlib import Path,WindowsPath
 from spotdl.types.album import Album
+from defs import install_ffmpeg
 st.title("Latest Spotify Downloader")
 #st.audio("SZA - Kill Bill.mp3")
 if "init" not in st.session_state:
@@ -13,7 +14,8 @@ if "downloads" not in st.session_state:
     st.session_state.downloads=[]
 def init():
     #os.run("spotdl --download-ffmpeg")
-    subprocess.run(["spotdl","--download-ffmpeg","--force"])
+    #subprocess.run(["spotdl","--download-ffmpeg","--force"])
+    install_ffmpeg()
     id=st.secrets["ID"]
     secret=st.secrets["SECRET"]
     sp = Spotdl(client_id=id, client_secret=secret)
