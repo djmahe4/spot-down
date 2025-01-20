@@ -1,7 +1,9 @@
 import streamlit as st
+import os
 from spotdl import Spotdl,Song#,Album
 from spotdl.types.album import Album
 st.title("Latest Spotify Downloader")
+os.popen("spotdl --download-ffmpeg")
 #st.audio("SZA - Kill Bill.mp3")
 spotdl = Spotdl(client_id='16a580bdff3b4b6f822804fb6372712c', client_secret='7b7b8f6350bb452a880cf2a2adab3187')                                                  #client_secret="7b7b8f6350bb452a880cf2a2adab3187"))
 # import feedparser,requests
