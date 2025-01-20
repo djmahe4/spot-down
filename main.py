@@ -31,3 +31,4 @@ if st.session_state.init:
         loc.update({i[0].name:i[1].name})
     print(loc)
     st.write(loc)
+
