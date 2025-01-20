@@ -13,7 +13,7 @@ if "downloads" not in st.session_state:
     st.session_state.downloads=[]
 def init():
     #os.run("spotdl --download-ffmpeg")
-    subprocess.run(["spotdl","--download-ffmpeg"])
+    #subprocess.run(["spotdl","--download-ffmpeg","N"])
     sp = Spotdl(client_id='16a580bdff3b4b6f822804fb6372712c', client_secret='7b7b8f6350bb452a880cf2a2adab3187')
     st.session_state.init=True
     st.session_state.sp=sp
