@@ -14,7 +14,8 @@ if "downloads" not in st.session_state:
     st.session_state.downloads=[]
 def init():
     #os.run("spotdl --download-ffmpeg")
-   if not os.path.isfile("home/appuser/.spotdl/ffmpeg"): subprocess.run(["spotdl","--download-ffmpeg","--y"])
+    if not os.path.isfile("home/appuser/.spotdl/ffmpeg"): 
+       subprocess.run(["spotdl","--download-ffmpeg"])
     #install_ffmpeg()
     id=st.secrets["ID"]
     secret=st.secrets["SECRET"]
