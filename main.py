@@ -18,7 +18,7 @@ def init():
     #install_ffmpeg()
     id=st.secrets["ID"]
     secret=st.secrets["SECRET"]
-    sp = Spotdl(client_id=id, client_secret=secret)
+    sp = Spotdl(client_id=id, client_secret=secret,headless=True)
     st.session_state.init=True
     st.session_state.sp=sp
     #client_secret="7b7b8f6350bb452a880cf2a2adab3187"))
